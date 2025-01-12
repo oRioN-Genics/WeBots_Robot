@@ -5,12 +5,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.3158507267059074 -0.1258228055859276 0.940429125470833 3.926111622656939
-  position 0.2907660603082627 0.3809083496653009 0.26535960338999137
+  orientation -0.40877638963514207 0.35697876326649747 0.8399214402868762 1.820015837123712
+  position 0.12081620027706262 -3.037456341546088 4.145769448543331
 }
 TexturedBackground {
 }
@@ -20,7 +21,19 @@ RectangleArena {
   floorSize 2.5 2.5
 }
 E-puck {
-  translation 0.07 0.15 0
+  hidden position_0_0 310.9844635382833
+  hidden position_0_1 306.8644186863363
+  hidden linearVelocity_0 0.03476304000852102 -0.005760416978469168 -4.113568552614802e-05
+  hidden angularVelocity_0 -0.0018974923809687307 0.0031851681897911164 -0.1597670444598922
+  hidden rotation_1 0 -1 0 3.1748018206960165
+  hidden linearVelocity_1 0.037690704049633095 -0.0067863399212779755 8.42699122284728e-05
+  hidden angularVelocity_1 0.9019503384562215 6.218166405770607 -0.2003638362682929
+  hidden rotation_2 0 1 0 5.271523941716156
+  hidden linearVelocity_2 0.03075537245539393 -0.0045404979111111346 1.4532285170408677e-05
+  hidden angularVelocity_2 0.2294198747852529 1.556221341409424 -0.1655253456561585
+  translation 0.37471469887992714 0.4492385521926949 -9.870128223885e-05
+  rotation -0.011675172918096017 0.0011049031312487148 -0.9999312323987101 0.13802847763709322
+  controller "wall_follower"
 }
 Wall {
   translation 1 -0.125 0
@@ -77,9 +90,21 @@ Wall {
 }
 Wall {
   translation 1.125 0.5 -1.91861e-08
-  rotation 7.63692e-12 1.91872e-08 -1 -3.14
+  rotation -7.636919999999998e-12 -1.9187199999999996e-08 0.9999999999999997 3.14
   name "wall(7)"
   size 0.25 0.01 0.1
+}
+Wall {
+  translation 1.125 0.49 -1.95698e-08
+  rotation -7.636919999999998e-12 -1.9187199999999996e-08 0.9999999999999997 3.14
+  name "wall(40)"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 0 1 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
 }
 Wall {
   translation 0.875 -0.25 -4.31658e-08
@@ -110,6 +135,42 @@ Wall {
   rotation 9.58216e-09 -1.91948e-08 1 3.14
   name "wall(21)"
   size 0.25 0.01 0.1
+}
+Wall {
+  translation -0.55 0.49 1.24846e-08
+  rotation 9.582159999999999e-09 -1.9194799999999993e-08 0.9999999999999997 3.14
+  name "wall(42)"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 0 1
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.7 -0.49 -2.20503e-08
+  rotation 9.582159999999999e-09 -1.9194799999999993e-08 0.9999999999999997 3.14
+  name "wall(43)"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.95 0.24 1.03767e-08
+  rotation 9.582159999999999e-09 -1.9194799999999993e-08 0.9999999999999997 3.14
+  name "wall(44)"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 0.647059 0.411765 0.117647
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
 }
 Wall {
   translation -0.875 -1 -3.81645e-08
@@ -236,6 +297,18 @@ Wall {
   rotation -2.4074999986034862e-05 2.4094199986023726e-05 0.999999999419932 0
   name "wall(19)"
   size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.05 1.245 -2.45504e-08
+  rotation -2.4074999986034862e-05 2.4094199986023726e-05 0.999999999419932 0
+  name "wall(41)"
+  size 0.1 0.01 0.1
+  appearance Roughcast {
+    colorOverride 1 1 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
 }
 Wall {
   translation -0.25 0.25 -2.45504e-08
